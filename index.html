@@ -53,9 +53,6 @@
 
             data.addRows([
               
-              // DESEVOLVEDOR FRONT END NIVEL I
-                [new Date(2022,1,12), new Date(2023,6,12), 'DESEVOLVEDOR FRONT END NIVEL I <br>' +
-                '<img src="img/comments-icon.png" style="width:32px; height:32px;">'],
               // SPRINTS
                 [new Date(2019,0,1), new Date(2022,0,1), 'TECNOLOGO EM GESTAO DE NEGOCIOS IMOBILIARIO<br>' +
                 '<img src="img/comments-icon.png" style="width:32px; height:32px;">'],
@@ -69,20 +66,6 @@
                 '<img src="img/comments-icon.png" style="width:32px; height:32px;">'],
                 [new Date(2022,4,1), new Date(2022,8,1), 'POS GRADUACAO EM ENGENHARIA DE SOFTWARE<br>' +
                 '<img src="img/comments-icon.png" style="width:32px; height:32px;">'],
-
-
-                ///
-                ///[new Date(2010,7,23,23,0,0), , 'Projeto<br>' +
-                ///        '<img src="img/mail-icon.png" style="width:32px; height:32px;">'],
-                ///[new Date(2010,7,24,16,0,0), , 'Report'],
-                ///[new Date(2010,7,26), new Date(2010,8,2), 'Traject A'],
-                ///[new Date(2010,7,28), , 'Memo<br>' +
-                //        '<img src="img/notes-edit-icon.png" style="width:48px; height:48px;">'],
-                ///[new Date(2010,7,29), , 'Phone call<br>' +
-                ///        '<img src="img/Hardware-Mobile-Phone-icon.png" style="width:32px; height:32px;">'],
-                /// [new Date(2010,7,31), new Date(2010,8,3), 'Traject B'],
-                ///[new Date(2010,8,4,12,0,0), , 'Report<br>' +
-                ///        '<img src="img/attachment-icon.png" style="width:32px; height:32px;">']
             
             ]);
 
@@ -159,55 +142,65 @@
                   </div>
                   <!-- todo -->
                   <div class="todo-container">
-                    <div class="status" id="no_status">
+                    
+		    <!-- SEM STATUS -->
+	            <div class="status" id="no_status">
                       <h1>No Status</h1>
                       <button id="add_btn" data-target-modal="#todo_form">+ Add Todo</button>
-                      <div class="todo" draggable="true">
-                        SPRINT-3
+                      
+		      <div class="todo" draggable="true">
+                        BACHARELADO EM CIENCIAS CONTABEIS
                         <span class="close">&times;</span>
-                      </div>                      
-                      <div class="todo" draggable="true">
-                        SPRINT-4
+                      </div>     
+			    
+		      <div class="todo" draggable="true">
+                        LICENCIATURA EM CIENCIA DA COMPUTAÇÃO
                         <span class="close">&times;</span>
-                      </div>
-                      <div class="todo" draggable="true">
-                        SPRINT-5
-                        <span class="close">&times;</span>
-                      </div>                      <div class="todo" draggable="true">
-                        SPRINT-6
-                        <span class="close">&times;</span>
-                      </div>
-                      <div class="todo" draggable="true">
-                        SPRINT-7
-                        <span class="close">&times;</span>
-                      </div>
-                      <div class="todo" draggable="true">
-                        SPRINT-8
-                        <span class="close">&times;</span>
-                      </div>                      
-                      <div class="todo" draggable="true">
-                        SPRINT-9
-                        <span class="close">&times;</span>
-                      </div>
+                      </div>             
 
                     </div>
-                    <div class="status">
+                   
+	            <!-- EM PROGRESSO -->
+		    <div class="status">
                       <h1>Not Started</h1>
+		      
+
                     </div>
-                    <div class="status">
+                    
+		    <!-- EM PROGRESSO -->
+		    <div class="status">
                       <h1>In Progress</h1>
-                        <div class="todo" draggable="true">
-                        SPRINT-2
+                      
+	              <div class="todo" draggable="true">
+                        TECNICO EM CONTABILIDADE
                         <span class="close">&times;</span>
-                      </div>
-                    </div>
+                      </div>        
+			    		      
+	              <div class="todo" draggable="true">
+                        TECNOLOGO EM ANALISE E DESENVOLVIMENTO DE SISTEMAS
+                        <span class="close">&times;</span>
+                      </div>          
+			    
+			    		      
+	              <div class="todo" draggable="true">
+                        POS GRADUACAO EM ENGENHARIA DE SOFTWARE
+                        <span class="close">&times;</span>
+                      </div>          
+	
+		    </div>
+			  
+			  
+		    <!-- COMPLETO-->
                     <div class="status">
                       <h1>Completed</h1>
                         <div class="todo" draggable="true">
-                        SPRINT-1
+                        TECNOLOGO EM GESTAO DE NEGOCIOS IMOBILIARIO
                         <span class="close">&times;</span>
                       </div>
                     </div>
+			  
+			  
+			  
                   </div>
 
                   <div id="overlay"></div>
