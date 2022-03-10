@@ -34,61 +34,76 @@
     <link rel="stylesheet" type="text/css" href="./static/styles/StyleKanbam.css">
     <link rel="stylesheet" type="text/css" href="./static/styles/StyleTeam.css">
 
-    <!--timeline-->
+     <!--timeline-->
      <script type="text/javascript">
         var timeline;
-
-        google.load("visualization", "1");
-
-        // Set callback to run when API is loaded
-        google.setOnLoadCallback(drawVisualization);
+        var data;
 
         // Called when the Visualization API is loaded.
         function drawVisualization() {
-            // Create and populate a data table.
-            var data = new google.visualization.DataTable();
-            data.addColumn('datetime', 'start');
-            data.addColumn('datetime', 'end');
-            data.addColumn('string', 'content');
-
-            data.addRows([
-              
-              // SPRINTS
-                [new Date(2019,0,1), new Date(2022,0,1), 'TECNOLOGO EM GESTAO DE NEGOCIOS IMOBILIARIO<br>' +
-                '<img src="img/comments-icon.png" style="width:32px; height:32px;">'],
-                [new Date(2019,0,1), new Date(2022,0,1), 'BACHARELADO EM CIENCIAS CONTABEIS<br>' +
-                '<img src="img/comments-icon.png" style="width:32px; height:32px;">'],
-                [new Date(2019,0,1), new Date(2024,0,1), 'LICENCIATURA EM CIENCIA DA COMPUTAÇÃO<br>' +
-                '<img src="img/comments-icon.png" style="width:32px; height:32px;">'],
-                [new Date(2021,5,1), new Date(2022,5,1), 'TECNICO EM CONTABILIDADE<br>' +
-                '<img src="img/comments-icon.png" style="width:32px; height:32px;">'],
-                [new Date(2022,0,1), new Date(2024,0,1), 'TECNOLOGO EM ANALISE E DESENVOLVIMENTO DE SISTEMAS<br>' +
-                '<img src="img/comments-icon.png" style="width:32px; height:32px;">'],
-                [new Date(2022,4,1), new Date(2022,8,1), 'POS GRADUACAO EM ENGENHARIA DE SOFTWARE<br>' +
-                '<img src="img/comments-icon.png" style="width:32px; height:32px;">'],
-            
-            ]);
+            // Create a JSON data table
+            data = [
+                {
+                    'start': new Date(2019,0,1),
+                    'end': new Date(2022,0,1),
+                    'content': 'BACHARELADO EM CIENCIAS CONTABEIS'
+                },
+                {
+                    'start': new Date(2019,0,1),
+                    'end': new Date(2022,0,1),
+                    'content': 'TECNOLOGO EM GESTAO DE NEGOCIOS IMOBILIARIO'
+                },
+                {
+                    'start': new Date(2019,0,1),
+                    'end': new Date(2024,0,1),
+                    'content': 'LICENCIATURA EM CIENCIA DA COMPUTAÇÃO'
+                },
+                {
+                    'start': new Date(2021,5,1),
+                    'end': new Date(2022,5,1),
+                    'content': 'TECNICO EM CONTABILIDADE'
+                },
+                {
+                    'start': new Date(2022,0,1),
+                    'end': new Date(2024,0,1),
+                    'content': 'TECNOLOGO EM ANALISE E DESENVOLVIMENTO DE SISTEMAS'
+                },
+                {
+                    'start': new Date(2022,4,1),
+                    'end': new Date(2022,8,1),
+                    'content': 'POS GRADUACAO EM ENGENHARIA DE SOFTWARE'
+                },
+            ];
 
             // specify options
             var options = {
-                "width":  "100%",
-                "height": "300px",
-                "style": "box"
+                'width':  '100%',
+                'height': '300px',
+                'editable': true,   // enable dragging and editing events
+                'style': 'box'
             };
 
             // Instantiate our timeline object.
             timeline = new links.Timeline(document.getElementById('mytimeline'), options);
 
+            function onRangeChanged(properties) {
+                document.getElementById('info').innerHTML += 'rangechanged ' +
+                        properties.start + ' - ' + properties.end + '<br>';
+            }
+
+            // attach an event listener using the links events handler
+            links.events.addListener(timeline, 'rangechanged', onRangeChanged);
+
             // Draw our timeline with the created data and options
             timeline.draw(data);
         }
-      </script>
+    </script>
     <!--timeline-->
 
 </head>
 
 
-<body>
+<body onload="drawVisualization();">
 
     <!-- MAIN CONTAINER -->
     <div class="menu-lateral">
