@@ -1,5 +1,5 @@
 # Sobre o Projeto:
-Desenvolvimento de um projeto que auxilie na gestao de atividade de cursos.
+Desenvolvimento de um projeto que auxilie na gestao de atividades de cursos.
 
 
 ### COMANDOS
