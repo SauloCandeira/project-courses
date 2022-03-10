@@ -5,15 +5,12 @@ Desenvolvimento de um projeto que auxilie na gestao de atividade de cursos.
 ### COMANDOS
 
 ```
-B[Analises]
+B[Gerenciador]
 
-B --> C{Concursos}
-C --> J[Banca]
-C --> K[Edital]
-C --> L[Conteudo]
-C --> O[Provas anteriores]
-C --> M[Revisoes]
-C --> N[Simulados]
+B --> C{Cursos}
+C --> J[Engenharia de Software]
+C --> K[Analise e Desenvolvimento de Sistemas]
+C --> L[Técnico em Contabilidade]
 ```
 
 
@@ -22,7 +19,7 @@ C --> N[Simulados]
 ```mermaid
 flowchart LR
 
-B[Analises]
+B[Gerenciador]
 
 B --> C{Cursos}
 C --> J[Engenharia de Software]
