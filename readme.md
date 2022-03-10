@@ -1,14 +1,19 @@
 # Sobre o Projeto:
-Jekyll Theme + Github, desenvolvimento de uma SPA em Jekyll e hospedando no GitHub Pages.
+Desenvolvimento de um projeto que auxilie na gestao de atividade de cursos.
 
 
 ### COMANDOS
 
 ```
-1º - Criar Repository
-2º - Escolher Tema
-3º - Configurar Tema
-4º - Publicar pagina 
+B[Analises]
+
+B --> C{Concursos}
+C --> J[Banca]
+C --> K[Edital]
+C --> L[Conteudo]
+C --> O[Provas anteriores]
+C --> M[Revisoes]
+C --> N[Simulados]
 ```
 
 
@@ -16,17 +21,13 @@ Jekyll Theme + Github, desenvolvimento de uma SPA em Jekyll e hospedando no GitH
 
 ```mermaid
 flowchart LR
-X[Repository] -->|Jekyll-Theme| A[Jekyll]
-A[Github] -->|Config.yml| B[GH-Pages]
 
-B --> C{APP}
-C --> J[Tasks]
-C --> K[Timeline]
-C --> L[Team]
-C --> M[Daily-Notes]
-C --> N[Analytics]
-C --> O[Laboratory]
+B[Analises]
 
+B --> C{Cursos}
+C --> J[Engenharia de Software]
+C --> K[Analise e Desenvolvimento de Sistemas]
+C --> L[Técnico em Contabilidade]
 ```
 
 ### FONTE:
