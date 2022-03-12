@@ -1,14 +1,16 @@
 # Sobre o Projeto:
-Desenvolvimento de um projeto que analisa editais e questões de concursos
+Desenvolvimento de um projeto que auxilie na gestao de atividades de cursos.
 
 
 ### COMANDOS
 
 ```
-1º - Criar Repository
-2º - Escolher Tema
-3º - Configurar Tema
-4º - Publicar pagina 
+B[Gerenciador]
+
+B --> C{Cursos}
+C --> J[Engenharia de Software]
+C --> K[Analise e Desenvolvimento de Sistemas]
+C --> L[Técnico em Contabilidade]
 ```
 
 
@@ -16,17 +18,13 @@ Desenvolvimento de um projeto que analisa editais e questões de concursos
 
 ```mermaid
 flowchart LR
-X[Repository] -->|Jekyll-Theme| A[Jekyll]
-A[Github] -->|Config.yml| B[GH-Pages]
 
-B --> C{APP}
-C --> J[Tasks]
-C --> K[Timeline]
-C --> L[Team]
-C --> M[Daily-Notes]
-C --> N[Analytics]
-C --> O[Laboratory]
+B[Gerenciador]
 
+B --> C{Cursos}
+C --> J[Engenharia de Software]
+C --> K[Analise e Desenvolvimento de Sistemas]
+C --> L[Técnico em Contabilidade]
 ```
 
 ### FONTE:
@@ -52,4 +50,5 @@ C --> O[Laboratory]
   </li>
   
 </ul>
+
 
