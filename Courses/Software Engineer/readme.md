@@ -14,17 +14,13 @@ C --> L[Técnico em Contabilidade]
 ```
 
 
-### FLUXOGRAMA/DIAGRAMA
+### GRAFICO EM HORAS
 
 ```mermaid
-flowchart LR
-
-B[Gerenciador]
-
-B --> C{Cursos}
-C --> J[Engenharia de Software]
-C --> K[Analise e Desenvolvimento de Sistemas]
-C --> L[Técnico em Contabilidade]
+pie
+"Sistema Operacionais" : 24
+"Logica de Programação" : 15
+"Estrutura de Dados" : 8
 ```
 
 ### FONTE:
